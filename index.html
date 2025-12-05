@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Filmes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="topbar">
+    <h1 class="logo">Filmes.pro</h1>
+
+    <div class="user-area">
+        <span id="userName"></span>
+        <button id="loginBtn">Login</button>
+    </div>
+</header>
+
+<!-- BUSCA -->
+<section class="search-box">
+    <input id="searchInput" type="text" placeholder="Buscar filme...">
+    <button onclick="searchMovies()">Buscar</button>
+</section>
+
+<!-- CARROSSEL 3D -->
+<section class="carousel-container">
+    <div class="carousel" id="carousel"></div>
+</section>
+
+<!-- RESULTADOS EM GRID -->
+<section id="results" class="movies-grid"></section>
+
+<!-- MODAL FILME -->
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- POPUP LOGIN -->
+<div id="loginModal" class="modal">
+    <div class="modal-login">
+        <h2>Entrar</h2>
+        <input type="text" id="loginName" placeholder="Seu nome">
+        <button onclick="loginUser()">Confirmar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
